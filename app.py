@@ -30,7 +30,7 @@ population = st.number_input('Block Population (e.g., 1400)', value=1400.0)
 # प्रेडिक्शन बटन
 if st.button('Predict'):
     # मॉडल को इनपुट देना
-    input_data = [[med_income, house_age, ave_rooms, ave_bedrms, population]]
+    input_data = [[med_income, house_age, ave_rooms, ave_bedrms, population,0.0,37.0,-122.0]]
     prediction = model.predict(input_data)
     
     # रिजल्ट दिखाना
