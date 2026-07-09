@@ -31,13 +31,13 @@ longitude = st.sidebar.number_input('Longitude',value=-122.23)
 ave_occupation = st.sidebar.number_input('Average_Occupancy',value=3.0)
 # 32 - बटन को भी साइडबार में डाल दो ताकि मेन स्क्रीन एकदम साफ रहे
 if st.sidebar.button('Predict'):
-# 34 - मॉडल को इनपुट देना
-input_data = [[med_income, house_age, ave_rooms, ave_bedrms, population, ave_occupation, latitude, longitude]]
-prediction = model.predict(input_data)
-# 36 - रिजल्ट दिखाने के लिए एक सुंदर सब-हेडर
-st.subheader("Results")
-st.write("---") # एक लाइन खींचने के लिए
-st.success(f"The predicted median house value is: ${prediction[0]:.2f}")    
-# 39 - एक छोटा सा 'एक्स्ट्रा' टच: कुछ डेटा दिखाना
-st.write("Based on the input parameters provided.")
+    # 34 - मॉडल को इनपुट देना
+    input_data = [[med_income, house_age, ave_rooms, ave_bedrms, population, ave_occupation, latitude, longitude]]
+    prediction = model.predict(input_data)
+    # 36 - रिजल्ट दिखाने के लिए एक सुंदर सब-हेडर
+    st.subheader("Results")
+    st.write("---") # एक लाइन खींचने के लिए
+    st.success(f"The predicted median house value is: ${prediction[0]:.2f}")    
+    # 39 - एक छोटा सा 'एक्स्ट्रा' टच: कुछ डेटा दिखाना
+    st.write("Based on the input parameters provided.")
    
