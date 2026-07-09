@@ -26,13 +26,13 @@ house_age = st.number_input('House Age (Years, e.g., 28)', value=28.0)
 ave_rooms = st.number_input('Average Rooms per Dwelling (e.g., 5.4)', value=5.4)
 ave_bedrms = st.number_input('Average Bedrooms per Dwelling (e.g., 1.1)', value=1.1)
 population = st.number_input('Block Population (e.g., 1400)', value=1400.0)
-latitude = st.number_input(latitude,value=37.88)
-longitude = st.number_input(longitude,value=-122.23)
+latitude = st.number_input('Latitude',value=37.88)
+longitude = st.number_input('Longitude',value=-122.23)
 ave_occupation = st.number_input(Average_Occupancy,value=3.0)
 # प्रेडिक्शन बटन
 if st.button('Predict'):
     # मॉडल को इनपुट देना
-    input_data = [[med_income, house_age, ave_rooms, ave_bedrms, population, ave_occup, latitude, longitude]]
+    input_data = [[med_income, house_age, ave_rooms, ave_bedrms, population, ave_occupation, latitude, longitude]]
     prediction = model.predict(input_data)
     
     # रिजल्ट दिखाना
